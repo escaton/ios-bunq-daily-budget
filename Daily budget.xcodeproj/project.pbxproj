@@ -7,18 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		202AA4012A9D091E0015EAF4 /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AA4002A9D091E0015EAF4 /* SharedViews.swift */; };
+		202AA4022A9D091E0015EAF4 /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AA4002A9D091E0015EAF4 /* SharedViews.swift */; };
+		202AA4032A9D09250015EAF4 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AA3FF2A9D09030015EAF4 /* Shared.swift */; };
+		202AA4042A9D09260015EAF4 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AA3FF2A9D09030015EAF4 /* Shared.swift */; };
 		20911E0C2A93D58700471E1B /* Daily_budgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20911E0B2A93D58700471E1B /* Daily_budgetApp.swift */; };
 		20911E0E2A93D58700471E1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20911E0D2A93D58700471E1B /* ContentView.swift */; };
 		20911E102A93D58800471E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20911E0F2A93D58800471E1B /* Assets.xcassets */; };
 		20911E132A93D58800471E1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20911E122A93D58800471E1B /* Preview Assets.xcassets */; };
+		20911E1A2A95291400471E1B /* BunqService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20911E192A95291400471E1B /* BunqService.swift */; };
+		20911E1C2A95338900471E1B /* BunqApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20911E1B2A95338900471E1B /* BunqApi.swift */; };
+		20911E1F2A965B8000471E1B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 20911E1E2A965B8000471E1B /* Alamofire */; };
+		20911E222A968D2A00471E1B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 20911E212A968D2A00471E1B /* SwiftyJSON */; };
+		20CE3E092A9A9A5C00E301DF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CE3E082A9A9A5C00E301DF /* WidgetKit.framework */; };
+		20CE3E0B2A9A9A5C00E301DF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CE3E0A2A9A9A5C00E301DF /* SwiftUI.framework */; };
+		20CE3E0E2A9A9A5C00E301DF /* Daily_budget_widgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE3E0D2A9A9A5C00E301DF /* Daily_budget_widgetBundle.swift */; };
+		20CE3E122A9A9A5C00E301DF /* Daily_budget_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE3E112A9A9A5C00E301DF /* Daily_budget_widget.swift */; };
+		20CE3E152A9A9A5E00E301DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20CE3E142A9A9A5E00E301DF /* Assets.xcassets */; };
+		20CE3E172A9A9A5E00E301DF /* Daily_budget_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 20CE3E132A9A9A5D00E301DF /* Daily_budget_widget.intentdefinition */; };
+		20CE3E182A9A9A5E00E301DF /* Daily_budget_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 20CE3E132A9A9A5D00E301DF /* Daily_budget_widget.intentdefinition */; };
+		20CE3E1B2A9A9A5E00E301DF /* Daily budget widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 20CE3E062A9A9A5C00E301DF /* Daily budget widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		20E097C32AB245B300D46C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20911E0F2A93D58800471E1B /* Assets.xcassets */; };
+		20FD15ED2AA3A7BD00441D0F /* BunqApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20911E1B2A95338900471E1B /* BunqApi.swift */; };
+		20FD15EF2AA3A92600441D0F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 20FD15EE2AA3A92600441D0F /* SwiftyJSON */; };
+		20FD15F12AA3A92900441D0F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 20FD15F02AA3A92900441D0F /* Alamofire */; };
+		20FD15F22AA3AAAE00441D0F /* BunqService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20911E192A95291400471E1B /* BunqService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		20CE3E192A9A9A5E00E301DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20911E002A93D58700471E1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20CE3E052A9A9A5C00E301DF;
+			remoteInfo = "Daily budget widgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		20CE3E1C2A9A9A5E00E301DF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				20CE3E1B2A9A9A5E00E301DF /* Daily budget widgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		202AA3FB2A9D04F40015EAF4 /* Daily budget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Daily budget.entitlements"; sourceTree = "<group>"; };
+		202AA3FC2A9D05490015EAF4 /* Daily budget widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Daily budget widgetExtension.entitlements"; sourceTree = "<group>"; };
+		202AA3FF2A9D09030015EAF4 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		202AA4002A9D091E0015EAF4 /* SharedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViews.swift; sourceTree = "<group>"; };
 		20911E082A93D58700471E1B /* Daily budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20911E0B2A93D58700471E1B /* Daily_budgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_budgetApp.swift; sourceTree = "<group>"; };
 		20911E0D2A93D58700471E1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20911E0F2A93D58800471E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20911E122A93D58800471E1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20911E192A95291400471E1B /* BunqService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunqService.swift; sourceTree = "<group>"; };
+		20911E1B2A95338900471E1B /* BunqApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunqApi.swift; sourceTree = "<group>"; };
+		20CE3E062A9A9A5C00E301DF /* Daily budget widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Daily budget widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20CE3E082A9A9A5C00E301DF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		20CE3E0A2A9A9A5C00E301DF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		20CE3E0D2A9A9A5C00E301DF /* Daily_budget_widgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_budget_widgetBundle.swift; sourceTree = "<group>"; };
+		20CE3E112A9A9A5C00E301DF /* Daily_budget_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_budget_widget.swift; sourceTree = "<group>"; };
+		20CE3E132A9A9A5D00E301DF /* Daily_budget_widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Daily_budget_widget.intentdefinition; sourceTree = "<group>"; };
+		20CE3E142A9A9A5E00E301DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20CE3E162A9A9A5E00E301DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +85,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20911E222A968D2A00471E1B /* SwiftyJSON in Frameworks */,
+				20911E1F2A965B8000471E1B /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20CE3E032A9A9A5C00E301DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FD15EF2AA3A92600441D0F /* SwiftyJSON in Frameworks */,
+				20FD15F12AA3A92900441D0F /* Alamofire in Frameworks */,
+				20CE3E0B2A9A9A5C00E301DF /* SwiftUI.framework in Frameworks */,
+				20CE3E092A9A9A5C00E301DF /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,7 +107,14 @@
 		20911DFF2A93D58700471E1B = {
 			isa = PBXGroup;
 			children = (
+				202AA4002A9D091E0015EAF4 /* SharedViews.swift */,
+				202AA3FF2A9D09030015EAF4 /* Shared.swift */,
+				202AA3FC2A9D05490015EAF4 /* Daily budget widgetExtension.entitlements */,
+				20911E192A95291400471E1B /* BunqService.swift */,
+				20911E1B2A95338900471E1B /* BunqApi.swift */,
 				20911E0A2A93D58700471E1B /* Daily budget */,
+				20CE3E0C2A9A9A5C00E301DF /* Daily budget widget */,
+				20CE3E072A9A9A5C00E301DF /* Frameworks */,
 				20911E092A93D58700471E1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				20911E082A93D58700471E1B /* Daily budget.app */,
+				20CE3E062A9A9A5C00E301DF /* Daily budget widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +131,7 @@
 		20911E0A2A93D58700471E1B /* Daily budget */ = {
 			isa = PBXGroup;
 			children = (
+				202AA3FB2A9D04F40015EAF4 /* Daily budget.entitlements */,
 				20911E0B2A93D58700471E1B /* Daily_budgetApp.swift */,
 				20911E0D2A93D58700471E1B /* ContentView.swift */,
 				20911E0F2A93D58800471E1B /* Assets.xcassets */,
@@ -67,6 +148,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		20CE3E072A9A9A5C00E301DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20CE3E082A9A9A5C00E301DF /* WidgetKit.framework */,
+				20CE3E0A2A9A9A5C00E301DF /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20CE3E0C2A9A9A5C00E301DF /* Daily budget widget */ = {
+			isa = PBXGroup;
+			children = (
+				20CE3E0D2A9A9A5C00E301DF /* Daily_budget_widgetBundle.swift */,
+				20CE3E112A9A9A5C00E301DF /* Daily_budget_widget.swift */,
+				20CE3E132A9A9A5D00E301DF /* Daily_budget_widget.intentdefinition */,
+				20CE3E142A9A9A5E00E301DF /* Assets.xcassets */,
+				20CE3E162A9A9A5E00E301DF /* Info.plist */,
+			);
+			path = "Daily budget widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +179,42 @@
 				20911E042A93D58700471E1B /* Sources */,
 				20911E052A93D58700471E1B /* Frameworks */,
 				20911E062A93D58700471E1B /* Resources */,
+				20CE3E1C2A9A9A5E00E301DF /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20CE3E1A2A9A9A5E00E301DF /* PBXTargetDependency */,
+			);
+			name = "Daily budget";
+			packageProductDependencies = (
+				20911E1E2A965B8000471E1B /* Alamofire */,
+				20911E212A968D2A00471E1B /* SwiftyJSON */,
+			);
+			productName = "Daily budget";
+			productReference = 20911E082A93D58700471E1B /* Daily budget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20CE3E052A9A9A5C00E301DF /* Daily budget widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20CE3E1F2A9A9A5E00E301DF /* Build configuration list for PBXNativeTarget "Daily budget widgetExtension" */;
+			buildPhases = (
+				20CE3E022A9A9A5C00E301DF /* Sources */,
+				20CE3E032A9A9A5C00E301DF /* Frameworks */,
+				20CE3E042A9A9A5C00E301DF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Daily budget";
-			productName = "Daily budget";
-			productReference = 20911E082A93D58700471E1B /* Daily budget.app */;
-			productType = "com.apple.product-type.application";
+			name = "Daily budget widgetExtension";
+			packageProductDependencies = (
+				20FD15EE2AA3A92600441D0F /* SwiftyJSON */,
+				20FD15F02AA3A92900441D0F /* Alamofire */,
+			);
+			productName = "Daily budget widgetExtension";
+			productReference = 20CE3E062A9A9A5C00E301DF /* Daily budget widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +229,9 @@
 					20911E072A93D58700471E1B = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
+					20CE3E052A9A9A5C00E301DF = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 20911E032A93D58700471E1B /* Build configuration list for PBXProject "Daily budget" */;
@@ -111,11 +243,16 @@
 				Base,
 			);
 			mainGroup = 20911DFF2A93D58700471E1B;
+			packageReferences = (
+				20911E1D2A965B8000471E1B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				20911E202A968D2A00471E1B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 20911E092A93D58700471E1B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				20911E072A93D58700471E1B /* Daily budget */,
+				20CE3E052A9A9A5C00E301DF /* Daily budget widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +267,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		20CE3E042A9A9A5C00E301DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20E097C32AB245B300D46C14 /* Assets.xcassets in Resources */,
+				20CE3E152A9A9A5E00E301DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +283,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20911E1C2A95338900471E1B /* BunqApi.swift in Sources */,
 				20911E0E2A93D58700471E1B /* ContentView.swift in Sources */,
 				20911E0C2A93D58700471E1B /* Daily_budgetApp.swift in Sources */,
+				20911E1A2A95291400471E1B /* BunqService.swift in Sources */,
+				202AA4012A9D091E0015EAF4 /* SharedViews.swift in Sources */,
+				202AA4032A9D09250015EAF4 /* Shared.swift in Sources */,
+				20CE3E182A9A9A5E00E301DF /* Daily_budget_widget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20CE3E022A9A9A5C00E301DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FD15ED2AA3A7BD00441D0F /* BunqApi.swift in Sources */,
+				202AA4042A9D09260015EAF4 /* Shared.swift in Sources */,
+				20CE3E0E2A9A9A5C00E301DF /* Daily_budget_widgetBundle.swift in Sources */,
+				202AA4022A9D091E0015EAF4 /* SharedViews.swift in Sources */,
+				20FD15F22AA3AAAE00441D0F /* BunqService.swift in Sources */,
+				20CE3E172A9A9A5E00E301DF /* Daily_budget_widget.intentdefinition in Sources */,
+				20CE3E122A9A9A5C00E301DF /* Daily_budget_widget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20CE3E1A2A9A9A5E00E301DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20CE3E052A9A9A5C00E301DF /* Daily budget widgetExtension */;
+			targetProxy = 20CE3E192A9A9A5E00E301DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		20911E142A93D58800471E1B /* Debug */ = {
@@ -195,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -262,8 +435,10 @@
 		20911E172A93D58800471E1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Daily budget/Daily budgetDebug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Daily budget/Preview Content\"";
@@ -275,6 +450,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -291,8 +467,10 @@
 		20911E182A93D58800471E1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Daily budget/Daily budget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Daily budget/Preview Content\"";
@@ -304,6 +482,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +490,62 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.escaton.Daily-budget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		20CE3E1D2A9A9A5E00E301DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Daily budget widgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P39F3684RR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Daily budget widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily budget widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.escaton.Daily-budget.Daily-budget-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20CE3E1E2A9A9A5E00E301DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Daily budget widgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P39F3684RR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Daily budget widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily budget widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.escaton.Daily-budget.Daily-budget-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,7 +573,58 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		20CE3E1F2A9A9A5E00E301DF /* Build configuration list for PBXNativeTarget "Daily budget widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20CE3E1D2A9A9A5E00E301DF /* Debug */,
+				20CE3E1E2A9A9A5E00E301DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20911E1D2A965B8000471E1B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.4;
+			};
+		};
+		20911E202A968D2A00471E1B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20911E1E2A965B8000471E1B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20911E1D2A965B8000471E1B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		20911E212A968D2A00471E1B /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20911E202A968D2A00471E1B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		20FD15EE2AA3A92600441D0F /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20911E202A968D2A00471E1B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		20FD15F02AA3A92900441D0F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20911E1D2A965B8000471E1B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20911E002A93D58700471E1B /* Project object */;
 }
