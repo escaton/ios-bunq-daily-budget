@@ -23,8 +23,6 @@ extension Color {
 }
 
 struct BalanceView: View {
-    var accountId: String
-    var accountName: String
     var todayLeftPercent: Float
     var todayLeft: Float
     var balance: Float
@@ -33,16 +31,12 @@ struct BalanceView: View {
     @State private var animationEnabled: Bool
     
     init(
-        accountId: String,
-        accountName: String,
         todayLeftPercent: Float,
         todayLeft: Float,
         balance: Float,
         thickness: Int = 20,
         widget: Bool = false
     ) {
-        self.accountId = accountId
-        self.accountName = accountName
         self.todayLeftPercent = todayLeftPercent
         self.todayLeft = todayLeft
         self.balance = balance
@@ -56,15 +50,6 @@ struct BalanceView: View {
         let startColor = Color(hue: 0.375, saturation: 0.738, brightness: 0.6)
         let endColor = Color(hue: 0.375, saturation: 0.738, brightness: 0.8)
         VStack {
-            if (widget == false) {
-                Link(destination: URL(string: "https://go.bunq.com/link/accounts/\(accountId)")!
-                ) {
-                    Text(accountName)
-                    Label("", systemImage: "arrow.up.forward.app").labelStyle(.iconOnly)
-                }
-                .font(.title)
-                .padding()
-            }
             ZStack {
                 ZStack {
                     Circle()
@@ -244,8 +229,6 @@ struct BalanceView_Preveview: PreviewProvider {
         let left = Float(80.01)
         ZStack {
             BalanceView(
-                accountId: "123",
-                accountName: "Main",
                 todayLeftPercent: left/80,
                 todayLeft: 100,
                 balance: -300

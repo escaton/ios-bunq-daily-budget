@@ -78,8 +78,8 @@
             filePath = "Daily budget/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -351,6 +351,36 @@
                   endingLineNumber = "19"
                   offsetFromSymbolStart = "228">
                </Location>
+               <Location
+                  uuid = "9CC603A5-8748-4FFD-AE2C-EEDB4F058F5D - fe25d323a3caf2b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUI.Color.adjust(hue: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, brightness: CoreGraphics.CGFloat, opacity: CoreGraphics.CGFloat) -&gt; SwiftUI.Color"
+                  moduleName = "Daily budget"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/SharedViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "9CC603A5-8748-4FFD-AE2C-EEDB4F058F5D - df9075f72fa6ee20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUI.Color.adjust(hue: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, brightness: CoreGraphics.CGFloat, opacity: CoreGraphics.CGFloat) -&gt; SwiftUI.Color"
+                  moduleName = "Daily budget widgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/SharedViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "244">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -364,8 +394,8 @@
             filePath = "SharedViews.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>

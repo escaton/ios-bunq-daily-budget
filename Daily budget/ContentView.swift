@@ -75,6 +75,8 @@ struct WithSettings <Content: View>: View {
     }
     
     @State private var showingSheet = false
+    @State private var sheetContentHeight = CGFloat(0)
+    @State private var showConfirm = false
 
     var body: some View {
         content()
@@ -85,22 +87,40 @@ struct WithSettings <Content: View>: View {
                 } label: {
                     Image(systemName: "gear")
                 }
-                .sheet(isPresented: $showingSheet) {
-                    VStack {
-                        Button {
-                            onClearData()
-                            showingSheet.toggle()
-                        } label: {
-                            Text("Clear data")
-                                .frame(maxWidth: .infinity)
-                        }
-                        .tint(.red)
-                        .controlSize(.large)
-                        .buttonStyle(.borderedProminent)
-                    }.padding(20)
-                }
                 .padding(20)
                 
+                .sheet(isPresented: $showingSheet) {
+                        VStack {
+                            Button {
+                                showConfirm.toggle()
+                            } label: {
+                                Text("Clear data")
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .alert("Are you sure?", isPresented: $showConfirm) {
+                                Button("Clear data", role: .destructive) {
+                                    onClearData()
+                                    showingSheet.toggle()
+                                }
+                                Button("Cancel", role: .cancel) {}
+                            }
+                            .tint(.red)
+                            .controlSize(.large)
+                            .buttonStyle(.borderedProminent)
+                        }
+                        .padding(20)
+                        .padding(.top, 15)
+                        .background {
+                            GeometryReader { g in
+                                Color.clear
+                                    .task {
+                                        sheetContentHeight = g.size.height
+                                    }
+                            }
+                        }
+                        .presentationDetents([.height(sheetContentHeight)])
+                        .presentationDragIndicator(.visible)
+                    }
             }
     }
 }
@@ -183,7 +203,6 @@ struct AccountViewContainer: View {
             seq += 1
         }
         .task(id: seq) {
-            balance = nil
             balance = await BunqService.shared.todayBalance(
                 authorization,
                 userId: userPreferences.userId,
@@ -204,27 +223,35 @@ struct AccountView: View {
     var balance: Balance?
     var onRefresh: () -> Void
     var body: some View {
-        VStack {
-            switch balance {
-            case .none:
-                ProgressView()
-            case .some(let balance):
-                BalanceView(
-                    accountId: userPreferences.accountId,
-                    accountName: userPreferences.accountName,
-                    todayLeftPercent: balance.todayLeftPercent,
-                    todayLeft: balance.todayLeft,
-                    balance: balance.balance
-                )
-                    .padding()
-                Text("\(balance.daysLeft) day(s) before payday")
-                    .padding()
-                Button(action: {
-                    onRefresh()
-                }) {
-                    Label("refresh", systemImage: "arrow.clockwise")
+        GeometryReader { g in
+            ScrollView {
+                VStack {
+                    switch balance {
+                    case .none:
+                        ProgressView()
+                    case .some(let balance):
+                        Link(destination: URL(string: "https://go.bunq.com/link/accounts/\(userPreferences.accountId)")!
+                        ) {
+                            Text(userPreferences.accountName)
+                            Label("", systemImage: "arrow.up.forward.app").labelStyle(.iconOnly)
+                        }
+                        .font(.title)
+                        .padding()
+                        BalanceView(
+                            todayLeftPercent: balance.todayLeftPercent,
+                            todayLeft: balance.todayLeft,
+                            balance: balance.balance
+                        )
+                        .padding()
+                        Text("\(balance.daysLeft) day(s) before payday")
+                            .padding()
+                        
+                    }
                 }
-                
+                .frame(minWidth: g.size.width, minHeight: g.size.height)
+            }
+            .refreshable {
+                onRefresh()
             }
         }
     }

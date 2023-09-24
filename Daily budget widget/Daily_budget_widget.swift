@@ -80,6 +80,21 @@ struct BalanceEntry: TimelineEntry {
     let balance: Balance
 }
 
+extension WidgetConfiguration
+{
+    func contentMarginsDisabledIfAvailable() -> some WidgetConfiguration
+    {
+        if #available(iOSApplicationExtension 17.0, *)
+        {
+            return self.contentMarginsDisabled()
+        }
+        else
+        {
+            return self
+        }
+    }
+}
+
 struct Daily_budget_widget: Widget {
     let kind: String = "Daily_budget_widget"
 
@@ -88,14 +103,41 @@ struct Daily_budget_widget: Widget {
             Daily_budget_widgetEntryView(entry: entry)
         }
         .configurationDisplayName("Daily budget")
+        .supportedFamilies([
+            .systemSmall,
+            .systemMedium,
+            .systemLarge,
+
+            // Add Support to Lock Screen widgets
+            .accessoryCircular,
+        ])
+        .contentMarginsDisabledIfAvailable()
     }
 }
 
+extension View {
+    func widgetBackground(_ color: Color) -> some View {
+        if #available(iOSApplicationExtension 17.0, macOSApplicationExtension 14.0, *) {
+            return containerBackground(color, for: .widget)
+        } else {
+            return background(color)
+        }
+    }
+}
+
+
 struct Daily_budget_widgetEntryView : View {
     var entry: Provider.Entry
-
+    
+    @Environment(\.widgetFamily)
+    var family
+    
     var body: some View {
-        WidgetBalanceView(balance: entry.balance)
+        if (family == .accessoryCircular) {
+            CircularWidgetView(balance: entry.balance)
+        } else {
+            WidgetBalanceView(balance: entry.balance)
+        }
     }
 }
 
@@ -105,8 +147,6 @@ struct WidgetBalanceView : View {
         VStack(spacing: 0) {
             
             BalanceView(
-                accountId: "",
-                accountName: "Empty",
                 todayLeftPercent: balance.todayLeftPercent,
                 todayLeft: balance.todayLeft,
                 balance: balance.balance,
@@ -121,29 +161,58 @@ struct WidgetBalanceView : View {
                 .font(.system(size: 10))
                 .padding(8)
         }
+        .widgetBackground(Color(UIColor.systemBackground))
     }
 }
 
-class RelativeMinutesDateFormatter : Formatter {
-    open override func string(for obj: Any?) -> String? {
-        guard let date = obj as? Date else {
-            return nil
+// Widget view for `accessoryCircular`
+struct CircularWidgetView: View {
+    var balance: Balance
+    var body: some View {
+        Gauge(value: balance.todayLeftPercent) {
+            Text("€\(Int(balance.todayLeft))")
+                .font(.system(.largeTitle, design: .rounded))
         }
-        let minutes = Int(date.timeIntervalSince(.now) / 60)
-        return "\(minutes)m"
+        .gaugeStyle(.accessoryCircularCapacity)
+        .widgetBackground(Color(UIColor.systemBackground))
     }
 }
 
 
-struct WidgetBalanceView_Previews: PreviewProvider {
-    static var previews: some View {
-        WidgetBalanceView(balance: Balance(
-            date: Date.now,
-            todayLeftPercent: Float(1),
-            todayLeft: 77.5,
-            balance: -300,
-            daysLeft: 28
-        ))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}
+//struct WidgetBalanceView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WidgetBalanceView(balance: Balance(
+//            date: Date.now,
+//            todayLeftPercent: Float(1),
+//            todayLeft: 77.5,
+//            balance: -300,
+//            daysLeft: 28
+//        ))
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//    }
+//}
+
+//#Preview("Widget", as: .systemMedium) {
+//    Daily_budget_widget()
+//} timeline: {
+//    BalanceEntry(date: Date.now, balance: Balance(
+//        date: Date.now,
+//        todayLeftPercent: Float(1),
+//        todayLeft: 77.5,
+//        balance: -300,
+//        daysLeft: 28
+//    ))
+//}
+
+//struct CircularWidgetView_Preview: PreviewProvider {
+//    static var previews: some View {
+//        CircularWidgetView(balance: Balance(
+//            date: Date.now,
+//            todayLeftPercent: Float(0.1),
+//            todayLeft: -77.5,
+//            balance: -300,
+//            daysLeft: 28
+//        ))
+//            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+//    }
+//}
