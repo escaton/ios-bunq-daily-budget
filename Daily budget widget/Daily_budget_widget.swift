@@ -110,6 +110,7 @@ struct Daily_budget_widget: Widget {
 
             // Add Support to Lock Screen widgets
             .accessoryCircular,
+            .accessoryRectangular
         ])
         .contentMarginsDisabledIfAvailable()
     }
@@ -135,6 +136,8 @@ struct Daily_budget_widgetEntryView : View {
     var body: some View {
         if (family == .accessoryCircular) {
             CircularWidgetView(balance: entry.balance)
+        } else if (family == .accessoryRectangular) {
+            RectWidgetView(balance: entry.balance)
         } else {
             WidgetBalanceView(balance: entry.balance)
         }
@@ -178,19 +181,39 @@ struct CircularWidgetView: View {
     }
 }
 
+// Widget view for `accessoryRectangular`
+struct RectWidgetView: View {
+    var balance: Balance
+    var body: some View {
+        VStack {
+            Gauge(value: balance.todayLeftPercent) {
+                Text("€\(Int(balance.todayLeft))")
+                    .font(.system(.callout, design: .rounded))
+            }
+            .gaugeStyle(.accessoryLinearCapacity)
+            Text("Balance: €\(Int(balance.balance))")
+                .font(.system(.callout, design: .rounded))
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text("^[\(balance.daysLeft) day](inflect: true) left")
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .widgetBackground(Color(UIColor.systemBackground))
+    }
+}
 
-//struct WidgetBalanceView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        WidgetBalanceView(balance: Balance(
-//            date: Date.now,
-//            todayLeftPercent: Float(1),
-//            todayLeft: 77.5,
-//            balance: -300,
-//            daysLeft: 28
-//        ))
-//            .previewContext(WidgetPreviewContext(family: .systemSmall))
-//    }
-//}
+
+struct WidgetBalanceView_Previews: PreviewProvider {
+    static var previews: some View {
+        WidgetBalanceView(balance: Balance(
+            date: Date.now,
+            todayLeftPercent: Float(1),
+            todayLeft: 77.5,
+            balance: -300,
+            daysLeft: 28
+        ))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+    }
+}
 
 //#Preview("Widget", as: .systemMedium) {
 //    Daily_budget_widget()
@@ -204,15 +227,32 @@ struct CircularWidgetView: View {
 //    ))
 //}
 
-//struct CircularWidgetView_Preview: PreviewProvider {
-//    static var previews: some View {
-//        CircularWidgetView(balance: Balance(
-//            date: Date.now,
-//            todayLeftPercent: Float(0.1),
-//            todayLeft: -77.5,
-//            balance: -300,
-//            daysLeft: 28
-//        ))
-//            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-//    }
-//}
+struct CircularWidgetView_Preview: PreviewProvider {
+    static var previews: some View {
+        CircularWidgetView(balance: Balance(
+            date: Date.now,
+            todayLeftPercent: Float(0.1),
+            todayLeft: -77.5,
+            balance: -300,
+            daysLeft: 28
+        ))
+            .previewContext(WidgetPreviewContext(
+                family: .accessoryCircular
+            ))
+    }
+}
+
+struct RectWidgetView_Preview: PreviewProvider {
+    static var previews: some View {
+        RectWidgetView(balance: Balance(
+            date: Date.now,
+            todayLeftPercent: Float(0.5),
+            todayLeft: 77.5,
+            balance: -300,
+            daysLeft: 28
+        ))
+            .previewContext(WidgetPreviewContext(
+                family: .accessoryRectangular
+            ))
+    }
+}

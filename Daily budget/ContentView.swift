@@ -243,7 +243,7 @@ struct AccountView: View {
                             balance: balance.balance
                         )
                         .padding()
-                        Text("\(balance.daysLeft) day(s) before payday")
+                        Text("^[\(balance.daysLeft) day](inflect: true) before salary")
                             .padding()
                         
                     }
