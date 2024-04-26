@@ -14,13 +14,13 @@ struct Provider: TimelineProvider {
     
     func placeholder(in context: Context) -> Entry {
         BalanceEntry(date: Date(), balance: Balance(
-            date: Date.now, todayLeftPercent: 1, todayLeft: 1, balance: 100, daysLeft: 1
+            date: Date.now, todayLeftPercent: 1, todayLeft: 1, totalLeft: 100, balance: 100, daysLeft: 1
         ))
     }
 
     func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
         let entry = BalanceEntry(date: Date(), balance: Balance(
-            date: Date.now, todayLeftPercent: 0.7, todayLeft: 62, balance: 100, daysLeft: 1
+            date: Date.now, todayLeftPercent: 0.7, todayLeft: 62, totalLeft: 100, balance: 100, daysLeft: 1
         ))
         completion(entry)
     }
@@ -138,6 +138,8 @@ struct Daily_budget_widgetEntryView : View {
             CircularWidgetView(balance: entry.balance)
         } else if (family == .accessoryRectangular) {
             RectWidgetView(balance: entry.balance)
+        } else if (family == .systemMedium) {
+            MediumWidgetBalanceView(balance: entry.balance)
         } else {
             WidgetBalanceView(balance: entry.balance)
         }
@@ -159,10 +161,40 @@ struct WidgetBalanceView : View {
             .padding(10)
             Stripes()
                 .frame(height: 5)
-        }.overlay(alignment: .bottomTrailing) {
-            Text(Date(), style: .relative)
-                .font(.system(size: 10))
-                .padding(8)
+        }
+        .widgetBackground(Color(UIColor.systemBackground))
+    }
+}
+
+struct MediumWidgetBalanceView : View {
+    var balance: Balance
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack(alignment: .bottom) {
+//                Spacer()
+                BalanceView(
+                    todayLeftPercent: balance.todayLeftPercent,
+                    todayLeft: balance.todayLeft,
+                    balance: balance.balance,
+                    thickness: 16,
+                    widget: true
+                )
+                Spacer()
+                VStack(alignment: .trailing) {
+                    HStack {
+                        Text("Balance: \(Text("€").font(.system(.title3, design: .rounded)))\(Int(balance.balance))")
+                            
+                        if (balance.totalLeft == balance.todayLeft) {
+                            Image(systemName: "exclamationmark.triangle.fill")
+                        }
+                    }
+                    Text("^[\(balance.daysLeft) \("day")](inflect: true) left")
+                }
+                
+            }
+            .padding(10)
+            Stripes()
+                .frame(height: 5)
         }
         .widgetBackground(Color(UIColor.systemBackground))
     }
@@ -185,74 +217,79 @@ struct CircularWidgetView: View {
 struct RectWidgetView: View {
     var balance: Balance
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Gauge(value: balance.todayLeftPercent) {
-                Text("€\(Int(balance.todayLeft))")
-                    .font(.system(.callout, design: .rounded))
+                    Text("\(Text("€").font(.system(.callout, design: .rounded)))\(Int(balance.todayLeft))")
+                        .font(.callout)
             }
             .gaugeStyle(.accessoryLinearCapacity)
-            Text("Balance: €\(Int(balance.balance))")
-                .font(.system(.callout, design: .rounded))
-                .frame(maxWidth: .infinity, alignment: .leading)
-            Text("^[\(balance.daysLeft) day](inflect: true) left")
-                .frame(maxWidth: .infinity, alignment: .leading)
+            HStack {
+                Text("Balance: \(Text("€").font(.system(.callout, design: .rounded)))\(Int(balance.balance))")
+                    .font(.callout)
+                    
+                if (balance.totalLeft == balance.todayLeft) {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .font(.system(size: 12))
+                }
+            }
+            Text("^[\(balance.daysLeft) \("day")](inflect: true) left")
         }
         .widgetBackground(Color(UIColor.systemBackground))
     }
 }
 
-
-struct WidgetBalanceView_Previews: PreviewProvider {
-    static var previews: some View {
-        WidgetBalanceView(balance: Balance(
-            date: Date.now,
-            todayLeftPercent: Float(1),
-            todayLeft: 77.5,
-            balance: -300,
-            daysLeft: 28
-        ))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
+@available(iOS 17.0, *)
+#Preview("Small", as: .systemSmall, widget: {
+    Daily_budget_widget()
+}) {
+    BalanceEntry(date: Date.now, balance: Balance(
+        date: Date.now,
+        todayLeftPercent: Float(1),
+        todayLeft: 77.5,
+        totalLeft: 100,
+        balance: -300,
+        daysLeft: 28
+    ))
 }
 
-//#Preview("Widget", as: .systemMedium) {
-//    Daily_budget_widget()
-//} timeline: {
-//    BalanceEntry(date: Date.now, balance: Balance(
-//        date: Date.now,
-//        todayLeftPercent: Float(1),
-//        todayLeft: 77.5,
-//        balance: -300,
-//        daysLeft: 28
-//    ))
-//}
-
-struct CircularWidgetView_Preview: PreviewProvider {
-    static var previews: some View {
-        CircularWidgetView(balance: Balance(
-            date: Date.now,
-            todayLeftPercent: Float(0.1),
-            todayLeft: -77.5,
-            balance: -300,
-            daysLeft: 28
-        ))
-            .previewContext(WidgetPreviewContext(
-                family: .accessoryCircular
-            ))
-    }
+@available(iOS 17.0, *)
+#Preview("Medium", as: .systemMedium, widget: {
+    Daily_budget_widget()
+}) {
+    BalanceEntry(date: Date.now, balance: Balance(
+        date: Date.now,
+        todayLeftPercent: Float(1),
+        todayLeft: 77.5,
+        totalLeft: 770.5,
+        balance: -30,
+        daysLeft: 28
+    ))
 }
 
-struct RectWidgetView_Preview: PreviewProvider {
-    static var previews: some View {
-        RectWidgetView(balance: Balance(
-            date: Date.now,
-            todayLeftPercent: Float(0.5),
-            todayLeft: 77.5,
-            balance: -300,
-            daysLeft: 28
-        ))
-            .previewContext(WidgetPreviewContext(
-                family: .accessoryRectangular
-            ))
-    }
+@available(iOS 17.0, *)
+#Preview("Circular", as: .accessoryCircular, widget: {
+    Daily_budget_widget()
+}) {
+    BalanceEntry(date: Date.now, balance: Balance(
+        date: Date.now,
+        todayLeftPercent: Float(1),
+        todayLeft: 77.5,
+        totalLeft: 100,
+        balance: -300,
+        daysLeft: 28
+    ))
+}
+
+@available(iOS 17.0, *)
+#Preview("Rect", as: .accessoryRectangular, widget: {
+    Daily_budget_widget()
+}) {
+    BalanceEntry(date: Date.now, balance: Balance(
+        date: Date.now,
+        todayLeftPercent: Float(1),
+        todayLeft: 77.5,
+        totalLeft: 100,
+        balance: -300,
+        daysLeft: 28
+    ))
 }

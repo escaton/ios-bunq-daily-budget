@@ -82,68 +82,6 @@
             endingLineNumber = "173"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "9E2764BB-98AC-447F-9834-E8641356118B - 9303996f14f4f547"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;, Swift.String, SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;, Swift.String, SwiftUI.Text&gt;&gt;&gt; in Daily_budget.SetupView.body.getter : some"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  uuid = "9E2764BB-98AC-447F-9834-E8641356118B - ad0fb5df423554aa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Daily_budget.MonetaryAccount) -&gt; SwiftUI.Text in closure #2 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;, Swift.String, SwiftUI.Text&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;, Swift.String, SwiftUI.Text&gt;&gt;&gt; in Daily_budget.SetupView.body.getter : some"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  uuid = "9E2764BB-98AC-447F-9834-E8641356118B - 4f09d193cdd73400"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.ProgressView&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in Daily_budget.SetupView.body.getter : some"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "188">
-               </Location>
-               <Location
-                  uuid = "9E2764BB-98AC-447F-9834-E8641356118B - db3adb8d6c3855c9"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Daily_budget.MonetaryAccount) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.ProgressView&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;, Swift.String, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in Daily_budget.SetupView.body.getter : some"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "212">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -160,38 +98,6 @@
             endingLineNumber = "98"
             landmarkName = "accounts(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5B2CD700-0F70-4C67-9348-135D7B061492 - a5ab74b1055cbf34"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for Daily_budget.BunqService.accounts(Daily_budget.AuthorizationData) async -&gt; Swift.Optional&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;&gt;"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/BunqService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "312">
-               </Location>
-               <Location
-                  uuid = "5B2CD700-0F70-4C67-9348-135D7B061492 - b77ff5206c689c23"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; Swift.Optional&lt;Daily_budget.MonetaryAccount&gt; in Daily_budget.BunqService.accounts(Daily_budget.AuthorizationData) async -&gt; Swift.Optional&lt;Swift.Array&lt;Daily_budget.MonetaryAccount&gt;&gt;"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/BunqService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "104">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -208,38 +114,6 @@
             endingLineNumber = "115"
             landmarkName = "serialize(request:response:data:error:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A4049681-F8FF-4719-9AAB-BD8800827AB0 - 7cbcac04bf03836d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Daily_budget.BunqApiJSONSerializer.serialize(request: Swift.Optional&lt;Foundation.URLRequest&gt;, response: Swift.Optional&lt;__C.NSHTTPURLResponse&gt;, data: Swift.Optional&lt;Foundation.Data&gt;, error: Swift.Optional&lt;Swift.Error&gt;) throws -&gt; SwiftyJSON.JSON"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/BunqApi.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "664">
-               </Location>
-               <Location
-                  uuid = "A4049681-F8FF-4719-9AAB-BD8800827AB0 - 7cbcac04bf03836d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Daily_budget.BunqApiJSONSerializer.serialize(request: Swift.Optional&lt;Foundation.URLRequest&gt;, response: Swift.Optional&lt;__C.NSHTTPURLResponse&gt;, data: Swift.Optional&lt;Foundation.Data&gt;, error: Swift.Optional&lt;Swift.Error&gt;) throws -&gt; SwiftyJSON.JSON"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/BunqApi.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "152">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -272,38 +146,6 @@
             endingLineNumber = "197"
             landmarkName = "todayBalance(_:userId:accountId:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "237A0AB8-A8B4-4FEF-8BCF-8314F17EDE5C - f94bac147a65fdd1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for Daily_budget.BunqService.todayBalance(_: Daily_budget.AuthorizationData, userId: Swift.String, accountId: Swift.String) async -&gt; Swift.Optional&lt;Daily_budget.Balance&gt;"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/BunqService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "202"
-                  endingLineNumber = "202"
-                  offsetFromSymbolStart = "2176">
-               </Location>
-               <Location
-                  uuid = "237A0AB8-A8B4-4FEF-8BCF-8314F17EDE5C - f94bac147a65fdd1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for Daily_budget.BunqService.todayBalance(_: Daily_budget.AuthorizationData, userId: Swift.String, accountId: Swift.String) async -&gt; Swift.Optional&lt;Daily_budget.Balance&gt;"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget/BunqService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "202"
-                  endingLineNumber = "202"
-                  offsetFromSymbolStart = "2188">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -320,68 +162,6 @@
             endingLineNumber = "19"
             landmarkName = "adjust(hue:saturation:brightness:opacity:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9CC603A5-8748-4FFD-AE2C-EEDB4F058F5D - df9075f72fa6ee20"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftUI.Color.adjust(hue: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, brightness: CoreGraphics.CGFloat, opacity: CoreGraphics.CGFloat) -&gt; SwiftUI.Color"
-                  moduleName = "Daily budget widgetExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/SharedViews.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "228">
-               </Location>
-               <Location
-                  uuid = "9CC603A5-8748-4FFD-AE2C-EEDB4F058F5D - fe25d323a3caf2b1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftUI.Color.adjust(hue: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, brightness: CoreGraphics.CGFloat, opacity: CoreGraphics.CGFloat) -&gt; SwiftUI.Color"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/SharedViews.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "228">
-               </Location>
-               <Location
-                  uuid = "9CC603A5-8748-4FFD-AE2C-EEDB4F058F5D - fe25d323a3caf2b1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftUI.Color.adjust(hue: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, brightness: CoreGraphics.CGFloat, opacity: CoreGraphics.CGFloat) -&gt; SwiftUI.Color"
-                  moduleName = "Daily budget"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/SharedViews.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "244">
-               </Location>
-               <Location
-                  uuid = "9CC603A5-8748-4FFD-AE2C-EEDB4F058F5D - df9075f72fa6ee20"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftUI.Color.adjust(hue: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, brightness: CoreGraphics.CGFloat, opacity: CoreGraphics.CGFloat) -&gt; SwiftUI.Color"
-                  moduleName = "Daily budget widgetExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/SharedViews.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "244">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -398,38 +178,6 @@
             endingLineNumber = "110"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "846C8AB1-66E4-421C-BA65-C4E4A7730FA9 - 99d7ffb34421f021"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.GeometryReader&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;)&gt; in Daily_budget_widgetExtension.BalanceView.body.getter : some"
-                  moduleName = "Daily budget widgetExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/SharedViews.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "4376">
-               </Location>
-               <Location
-                  uuid = "846C8AB1-66E4-421C-BA65-C4E4A7730FA9 - 4f7a18d8ad805473"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.GeometryReader&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;)&gt; in Daily_budget_widgetExtension.BalanceView.body.getter : some"
-                  moduleName = "Daily budget widgetExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/SharedViews.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "276">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -478,53 +226,22 @@
             endingLineNumber = "40"
             landmarkName = "getTimeline(in:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2869812A-5C0C-43DD-AC0C-3B7702C696EF - 556a7fb79089afdf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Daily_budget_widgetExtension.Provider.getTimeline(in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;Daily_budget_widgetExtension.BalanceEntry&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Daily budget widgetExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget%20widget/Daily_budget_widget.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "1272">
-               </Location>
-               <Location
-                  uuid = "2869812A-5C0C-43DD-AC0C-3B7702C696EF - 556a7fb79089afdf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Daily_budget_widgetExtension.Provider.getTimeline(in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;Daily_budget_widgetExtension.BalanceEntry&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Daily budget widgetExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget%20widget/Daily_budget_widget.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "1432">
-               </Location>
-               <Location
-                  uuid = "2869812A-5C0C-43DD-AC0C-3B7702C696EF - 556a7fb79089afdf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Daily_budget_widgetExtension.Provider.getTimeline(in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;Daily_budget_widgetExtension.BalanceEntry&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Daily budget widgetExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/escaton/Projects/bunq/daily-budget/Daily%20budget/Daily%20budget%20widget/Daily_budget_widget.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "3040">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "841ED495-2ACC-4040-BBFC-B5FAEC9E91C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BunqService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "todayBalance(_:userId:accountId:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

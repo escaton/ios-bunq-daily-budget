@@ -243,7 +243,7 @@ struct AccountView: View {
                             balance: balance.balance
                         )
                         .padding()
-                        Text("^[\(balance.daysLeft) day](inflect: true) before salary")
+                        Text("^[\(balance.daysLeft) \("day")](inflect: true) before salary")
                             .padding()
                         
                     }
@@ -289,6 +289,7 @@ struct AccountView_Preview: PreviewProvider {
                     date: Date.now,
                     todayLeftPercent: 0.7,
                     todayLeft: 65,
+                    totalLeft: 100,
                     balance: 30,
                     daysLeft: 25
                 )

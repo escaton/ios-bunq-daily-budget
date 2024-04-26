@@ -41,6 +41,7 @@ struct Balance: Codable {
     let date: Date
     let todayLeftPercent: Float
     let todayLeft: Float
+    let totalLeft: Float
     let balance: Float
     let daysLeft: Int
 }
@@ -219,26 +220,25 @@ class BunqService {
                     if let yesterdayPayment = payments.first(where: { $0.created < startOfToday }) {
                         // have today and yesterday history
                         todaySpent = yesterdayPayment.balanceAfter - recentPayment.balanceAfter
-                        balanceAfter = recentPayment.balanceAfter
                     } else {
                         // all payments are today's
                         todaySpent = 0
-                        balanceAfter = recentPayment.balanceAfter
                     }
                 } else {
                     // no payments today
                     todaySpent = 0
-                    balanceAfter = recentPayment.balanceAfter
                 }
+                balanceAfter = recentPayment.balanceAfter
             }
             
-            let todayLeft = min(max(80-todaySpent,0),80)
+            let todayLeft = min(max(Constants.daylyLimit-todaySpent,0), Constants.daylyLimit, balanceAfter)
             
             return Balance(
                 date: Date.now,
-                todayLeftPercent: todayLeft/80,
+                todayLeftPercent: todayLeft/Constants.daylyLimit,
                 todayLeft: todayLeft,
-                balance: balanceAfter - todayLeft - Float(daysBefore25th-1) * 80,
+                totalLeft: balanceAfter,
+                balance: balanceAfter - todayLeft - Float(daysBefore25th-1) * Constants.daylyLimit,
                 daysLeft: daysBefore25th
             )
         } catch {
