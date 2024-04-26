@@ -1,0 +1,26 @@
+{
+    "name": "Escaton's source",
+    "apps": [
+        {
+            "name": "Daily budget",
+            "bundleIdentifier": "com.escaton.local.Daily-budget",
+            "developerName": "Escaton",
+            "localizedDescription": "Daily budget",
+            "iconURL": "https://example.com/myapp_icon.png",
+            "versions": [
+                {
+                    "version": "1.0",
+                    "date": "2024-04-26",
+                    "localizedDescription": "First AltStore release!",
+                    "downloadURL": "https://escaton.github.io/ios-bunq-daily-budget/Daily%20budget.ipa",
+                    "size": 1591701,
+                    "minOSVersion": "16.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": ["com.apple.security.application-groups"]
+            }
+        }
+    ],
+    "news": []
+}
